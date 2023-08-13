@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+}
+.main-container {
+    background-color: rgba(232,236,239,255);
+    height: 30vh;
+    width: 66.5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.create-button{
+    height: 2rem;
+    width: 15rem;
+    border: 2px solid #2b6777;
+    border-radius: 4px;
+    background-color: rgba(232,236,239,255);
+    color: black;
+    font-family: 'Inter', sans-serif;
+}
+.create-button:hover{
+    background-color:  #2b6777;
+    color: #ffff;
+}

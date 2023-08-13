@@ -1,0 +1,22 @@
+.Add-button{
+    margin-right: 1rem;
+}
+.Add-button{
+    height: 2rem;
+    width: 6rem;
+    border: 2px solid #428bca;
+    border-radius: 4px;
+    background-color: #428bca;
+    color: #ffff;
+    font-family: 'Inter', sans-serif;
+}
+
+.clear-button{
+    height: 2rem;
+    width: 6rem;
+    border: 2px solid #d9534f;
+    border-radius: 4px;
+    background-color: #d9534f;
+    color: #ffff;
+    font-family: 'Inter', sans-serif;
+}
