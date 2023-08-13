@@ -4,17 +4,20 @@ import com.example.managementsystem.constant.ApiConstant;
 import com.example.managementsystem.entities.Course;
 import com.example.managementsystem.payloads.CourseDto;
 import com.example.managementsystem.services.CourseService;
-import jakarta.validation.Valid;
+//import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
-
+//@CrossOrigin
 @RestController
-@RequestMapping(ApiConstant.API)
 @AllArgsConstructor
+//@CrossOrigin(origins = "*", methods = {RequestMethod.GET, RequestMethod.POST,
+//RequestMethod.PUT, RequestMethod.DELETE}
+@CrossOrigin
 public class CourseController {
 
     private CourseService courseService;
@@ -30,7 +33,7 @@ public class CourseController {
         return new ResponseEntity<CourseDto>(courseDto, HttpStatus.OK);
     }
     @PostMapping(ApiConstant.COURSE)
-    public ResponseEntity<CourseDto> createCourse(@Valid  @RequestBody CourseDto courseDto) {
+    public ResponseEntity<CourseDto> createCourse(@Valid @RequestBody CourseDto courseDto) {
         CourseDto courseDto1 = this.courseService.createCourse(courseDto);
         return new ResponseEntity<CourseDto>(courseDto1, HttpStatus.CREATED);
     }
